@@ -1,0 +1,22 @@
+[
+	{
+		"id": 1,
+		"title": "имени",
+		"param": "username"
+	},
+	{
+		"id": 2,
+		"title": "id",
+		"param": "id"
+	},
+	{
+		"id": 3,
+		"title": "почте",
+		"param": "email"
+	},
+	{
+		"id": 4,
+		"title": "статусу",
+		"param": "status"
+	}
+]

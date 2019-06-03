@@ -1,0 +1,1 @@
+export { UserTemplate } from './UserTemplate'

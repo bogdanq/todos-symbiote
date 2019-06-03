@@ -1,0 +1,14 @@
+[
+	{
+		"text": "Все",
+		"filter": "all"
+	},
+	{
+		"text": "Активне",
+		"filter": "active"
+	},
+	{
+		"text": "Выполненные",
+		"filter": "completed"
+	}
+]
