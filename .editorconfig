@@ -9,7 +9,10 @@ insert_final_newline = true
 charset = utf-8
 indent_style = tab
 indent_size = 2
+<<<<<<< HEAD
 trim_trailing_whitespace = true
 
 [*.md]
 trim_trailing_whitespace = false
+=======
+>>>>>>> 366309f03f1077b7ae1b1b4e53f084465a29d7ef
