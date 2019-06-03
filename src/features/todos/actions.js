@@ -20,7 +20,7 @@ export const getTodoList = (page) => async (
 export const addTodo = (data) => async (dispatch, getState, { TodoApi }) => {
 	dispatch(actions.addTodo.start())
 	try {
-		TodoApi.addTodo('create?developer=bogdan', data)
+		await TodoApi.addTodo('create?developer=bogdan', data)
 		dispatch(actions.addTodo.finish(data))
 	} catch (err) {
 		dispatch(actions.addTodo.failed(err))
@@ -51,7 +51,7 @@ export const editTodo = ({ text }, { status }, id) => async (
 ) => {
 	dispatch(actions.editTodo.start())
 	try {
-		TodoApi.editTodo(`edit/${id}?developer=bogdan`, {
+		await TodoApi.editTodo(`edit/${id}?developer=bogdan`, {
 			text,
 			status,
 			token: TodoApi.api.token,
