@@ -46,12 +46,12 @@ const enhance = connect(
 )
 
 LoginFormView.propTypes = {
-	authError: PropTypes.string,
+	authError: PropTypes.object,
 	signInStart: PropTypes.func.isRequired
 }
 
 LoginFormView.defaultProps = {
-	authError: ''
+	authError: {}
 }
 
 export const LoginForm = enhance(LoginFormView)

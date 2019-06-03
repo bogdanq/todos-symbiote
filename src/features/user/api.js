@@ -9,9 +9,6 @@ export class UserApi {
 	}
 
 	signIn(url, data) {
-		return this.api
-			.post(url, data)
-			.then(({ data }) => data)
-			.catch((err) => err)
+		return this.api.post(url, data).then(({ data }) => data)
 	}
 }

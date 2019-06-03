@@ -73,11 +73,11 @@ BaseForm.propTypes = {
 	fields: PropTypes.array.isRequired,
 	shema: PropTypes.object.isRequired,
 	onSubmit: PropTypes.func.isRequired,
-	error: PropTypes.string,
+	error: PropTypes.object,
 	nameSubmit: PropTypes.string,
 }
 
 BaseForm.defaultProps = {
-	error: '',
+	error: {},
 	nameSubmit: '',
 }

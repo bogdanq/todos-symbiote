@@ -9,16 +9,10 @@ export class TodoApi {
 	}
 
 	addTodo(url, data) {
-		return this.api
-			.post(url, data)
-			.then(res => res)
-			.catch(err => err)
+		return this.api.post(url, data).then((res) => res)
 	}
 
 	editTodo(url, data) {
-		return this.api
-			.post(url, data)
-			.then(res => res)
-			.catch(err => err)
+		return this.api.post(url, data).then((res) => res)
 	}
 }

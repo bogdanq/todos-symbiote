@@ -1,18 +1,19 @@
 import axios from 'axios'
 import cookies from 'browser-cookies'
+import { withThrowError } from './lib/axios-enhancer'
 let baseUrl = 'https://cors-anywhere.herokuapp.com/https://uxcandy.com/~shapoval/test-task-backend/v2/'
 
 class Api {
 	constructor(url) {
 		this.url = url
 		this.token = cookies.get('token')
-		this.request = axios.create({
+		this.request = withThrowError(axios.create({
 			baseURL: baseUrl,
 			headers: {
 				'Content-Type': 'multipart/form-data',
 				'token': this.token
 			},
-		})
+		}))
 	}
 
 	get(url) {

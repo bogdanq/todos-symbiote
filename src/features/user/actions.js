@@ -4,7 +4,7 @@ import history from '../../lib/history'
 
 export const getUser = () => (dispatch) => {
 	dispatch(actions.getUser.start())
-
+	
 	let token = cookies.get('token')
 
 	if (token !== null) {
@@ -14,17 +14,16 @@ export const getUser = () => (dispatch) => {
 	}
 }
 
-export const signIn = (data) => (dispatch, setState, { UserApi }) => {
+export const signIn = (data) => async (dispatch, setState, { UserApi }) => {
 	dispatch(actions.signIn.start())
-	return UserApi.signIn('login?developer=bogdan', data).then((res) => {
-		if (res.status !== 'error') {
-			dispatch(actions.signIn.finish())
-			cookies.set('token', res.message.token)
-			history.push('/')
-		} else {
-			dispatch(actions.signIn.failed(res.message))
-		}	
-	})
+	try {
+		const res = await UserApi.signIn('login?developer=bogdan', data)
+		dispatch(actions.signIn.finish())
+		cookies.set('token', res.message.token)
+		history.push('/')
+	} catch(err) {
+		dispatch(actions.signIn.failed(err))
+	}
 }
 
 export const logOut = () => (dispatch, setState, { UserApi }) => {
