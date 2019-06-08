@@ -15,7 +15,7 @@ Stack
 - React (Create-React-App)
 - Styled Components
 - Atomic Design
-- Features Slice
+- Feature Slices
 - React Router
 - Formik
 - Redux(symbiote)
