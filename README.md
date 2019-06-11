@@ -18,5 +18,8 @@ Stack
 - Feature Slices
 - React Router
 - Formik
+- Yup
 - Redux(symbiote)
 - Context API
+- hooks
+- functional components
